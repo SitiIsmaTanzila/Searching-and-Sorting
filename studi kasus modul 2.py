@@ -1,0 +1,51 @@
+#STUDI KASUS
+print("STUDI KASUS 1")
+def linear_search(arr, target):
+    for i in range (len(arr)):
+        if arr[i] == target:
+            return -i
+    return -1
+data= [60, 75, 80, 85, 95]
+angka_dicari = 95 #target
+hasil = linear_search(data, angka_dicari)
+print(data)
+if hasil !=-1:
+    print("angka", angka_dicari, " ada di indeks ke -", hasil)
+else:
+    print("angka tidak ditemukan")
+
+print("STUDI KASUS 2")
+def bubble_sort(arr):
+
+    n = len(arr)
+    for i in range(n):
+        for j in range (n-i-1):
+            if arr[j] > arr [j+1]:
+                arr [j], arr[j+1] = arr[j+1], arr [j]
+    return arr
+# data yang akan diurutkan
+data = [85, 70, 90, 95, 60]
+#panggil fungsi
+hasil = bubble_sort(data)
+#tampilkan hasil
+print ("Data sebelum sorting:", [85, 70, 90, 95, 60 ])
+print("Data setelah sorting:", hasil)
+
+print("STUDI KASUS 3")
+print("NAIVE STRING MATCHING")
+
+# Dokumen / text
+text = "ZILA PEREMPUAN CANTIK DAN IMUT"
+print(text)
+# Kata yang dicari
+pattern = "IMUT"
+print("kata yg dicari:", pattern)
+
+# Proses pencarian
+for i in range(len(text) - len(pattern) + 1):
+
+    # Membandingkan substring dengan pattern
+    if text[i : i + len(pattern)] == pattern:
+
+        # Menampilkan posisi kata ditemukan
+        print("Kata ditemukan di index", i)
